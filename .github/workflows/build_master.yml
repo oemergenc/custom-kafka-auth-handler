@@ -1,12 +1,14 @@
-name: Publish Release
+name: Build master branch
 
 on:
-  release:
-    types: [ published ]
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
+  build-master:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout project
         uses: actions/checkout@v2
@@ -21,11 +23,6 @@ jobs:
         with:
           java-version: '8.0.192'
           server-id: github
-      - name: Configure Git user
+      - name: Build master
         run: |
-          git config user.email "oemergenc@gmail.com"
-          git config user.name "Oemer Genc"
-      - name: Publish JAR
-        run: ./mvnw -B release:prepare release:perform
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ./mvnw clean verify
