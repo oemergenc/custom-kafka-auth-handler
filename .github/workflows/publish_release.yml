@@ -27,6 +27,6 @@ jobs:
           git config user.email "oemergenc@gmail.com"
           git config user.name "Oemer Genc"
       - name: Publish JAR
-        run: ./mvnw -B release:prepare release:perform
+        run: ./mvnw -B -DskipTests -Darguments=-DskipTests release:prepare release:perform
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
