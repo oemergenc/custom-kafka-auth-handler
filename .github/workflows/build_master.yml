@@ -3,7 +3,7 @@ name: Build master branch
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-master:
@@ -23,6 +23,6 @@ jobs:
         with:
           java-version: '8.0.192'
           server-id: github
-      - name: Build master
+      - name: Build main
         run: |
           ./mvnw clean verify
