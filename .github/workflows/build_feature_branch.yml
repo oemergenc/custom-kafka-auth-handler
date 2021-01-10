@@ -23,6 +23,6 @@ jobs:
         with:
           java-version: 1.8
           server-id: github
-      - name: Build main
+      - name: Build branch
         run: |
           ./mvnw clean verify

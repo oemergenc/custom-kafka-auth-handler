@@ -65,7 +65,7 @@ public class KafkaTestUtils {
     public Set<String> getTopics() {
         log.info("Going to get all topics names");
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(consumerProps());
-        return new HashSet<>(consumer.listTopics().keySet());
+        return consumer.listTopics().keySet();
     }
 
     Properties consumerProps() {
