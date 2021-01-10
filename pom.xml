@@ -16,12 +16,6 @@
         <url>http://www.custom-gmbh.com</url>
     </organization>
 
-    <scm>
-        <connection>scm:git:ssh://git@github.com/oemergenc/custom-kafka-auth-handler.git</connection>
-        <url>https://github.com.com/oemergenc/custom-kafka-auth-handler</url>
-        <tag>custom-kafka-auth-handler-1.0.x</tag>
-    </scm>
-
     <developers>
         <developer>
             <name>Oemer Genc</name>
@@ -46,6 +40,10 @@
         <kafka-clients.version>2.5.1</kafka-clients.version>
         <logback.version>1.2.3</logback.version>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/${git.repository}.git</developerConnection>
+    </scm>
 
     <distributionManagement>
         <repository>
