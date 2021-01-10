@@ -17,8 +17,9 @@ kafkacat -b localhost:9092 -X security.protocol=SASL_PLAINTEXT -X sasl.mechanism
 
 ## Release
 
-Pushing changes on the remote `release` branch will trigger the release ci pipeline on github and publish a new release.
+Pushing changes directly on the remote `main` branch or merging feature branches will trigger the release ci pipeline on
+github and publish a new release.
 
 ```
-git push origin main:release
+git push origin main
 ```

@@ -2,7 +2,7 @@ name: Build main branch
 
 on:
   push:
-    branches:
+    branches-ignore:
       - main
 
 jobs:

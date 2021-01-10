@@ -1,9 +1,9 @@
-name: Publish Release
+name: Build main branch and publish release
 
 on:
   push:
     branches:
-      - release
+      - main
 
 jobs:
   build:
