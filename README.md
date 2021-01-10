@@ -1,6 +1,6 @@
 # Custom Kafka Auth Handlers
 
-TBD
+Project demonstrating the usage of a custom kafka authorization handler.
 
 ## Usage
 
