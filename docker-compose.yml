@@ -16,7 +16,7 @@ services:
       - zookeeper
     volumes:
       - ./security:/etc/kafka/secrets
-      - ./target/custom-kafka-auth-handler-1.0-SNAPSHOT.jar:/etc/kafka/jars/custom-kafka-auth-handler-1.0-SNAPSHOT.jar
+      - ./target/:/etc/kafka/jars/
     ports:
       - "9092:9092"
     environment:
